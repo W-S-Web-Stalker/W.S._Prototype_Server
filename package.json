@@ -19,8 +19,10 @@
   "homepage": "https://github.com/W-S-Web-Stalker/W.S._Prototype_Server#readme",
   "dependencies": {
     "@types/express": "^4.17.11",
+    "@types/puppeteer": "^5.4.3",
     "express": "^4.17.1",
     "nodemon": "^2.0.7",
+    "puppeteer": "^7.1.0",
     "ts-node": "^9.1.1"
   }
 }

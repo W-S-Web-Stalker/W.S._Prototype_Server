@@ -16,7 +16,8 @@ Content-Type: application/json
 */
 //====================================
 
-class ScrapReq {
+//Class Definition
+export class ScrapReq {
     private readonly url:string;
     private readonly xPath:string;
 

@@ -9,10 +9,12 @@ Dedicated jobs:
 
 //Imports
 import express from 'express';
+import { ScrapReq } from "../model/reqModel";
+import { Scrapper } from "../controller/scrap";
 
 //Code Starts Here
-
 const router = express.Router();
+const scrapper = new Scrapper();
 
 router.post("/",(req:express.Request, res: express.Response) => {
     //Incoming Request Body
@@ -22,10 +24,10 @@ router.post("/",(req:express.Request, res: express.Response) => {
         "xpath":"example xpath"
     }
     */
-    const url: string = req.body.url;
-    const xPath: string = req.body.xpath;
-
-
+    //console.log(req.body.url,req.body.xPath);
+    const scrap:ScrapReq = new ScrapReq(req.body.url,req.body.xPath);
+    scrapper.receiveTarget(scrap);
+    res.send("Done!");
 })
 
 export default router;
