@@ -9,18 +9,13 @@ Managing GET and POST Http Requests.
 //Imports
 import express from 'express';
 import reqRouter from './userRequest';
-
-//Class Definition
-class App {
-    public application: express.Application;
-
-    constructor() {
-        this.application = express();
-    }
-}
+import App from "../model/app"
 
 //Code Starts Here
 const app:express.Application = new App().application;
+
+//Set body-parser for JSON - req.body can read JSON body.
+app.use(express.json());
 
 //Endpoint "/"
 //Main page for testing purpose.

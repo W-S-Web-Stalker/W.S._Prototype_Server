@@ -14,8 +14,18 @@ import express from 'express';
 
 const router = express.Router();
 
-router.post("/",(req:express.Request, res: express.Request) => {
-    console.log("Post Request");
+router.post("/",(req:express.Request, res: express.Response) => {
+    //Incoming Request Body
+    /*
+    {
+        "url":"www.example.com",
+        "xpath":"example xpath"
+    }
+    */
+    const url: string = req.body.url;
+    const xPath: string = req.body.xpath;
+
+
 })
 
 export default router;
