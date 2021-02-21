@@ -26,6 +26,8 @@ app.get("/",(req:express.Request,res:express.Response) => {
 //User Request uses request Router; definitions are declared at userRequest.ts
 app.use("/req",reqRouter);
 
-//Listen in localhost 3000
-app.listen(3000, () => console.log("http://localhost:3000"));
+export default app;
+
+
+
 
