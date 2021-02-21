@@ -14,9 +14,6 @@ import App from "../model/app"
 //Code Starts Here
 const app:express.Application = new App().application;
 
-//Set body-parser for JSON - req.body can read JSON body.
-app.use(express.json());
-
 //Endpoint "/"
 //Main page for testing purpose.
 app.get("/",(req:express.Request,res:express.Response) => {

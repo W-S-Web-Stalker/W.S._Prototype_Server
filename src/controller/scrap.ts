@@ -31,7 +31,7 @@ export class Scrapper{
         const page: puppeteer.Page = await browser.newPage();
 
         await page.goto(url); //Go to the dedicated url
-        await page.type("input[class=\"gLFyf gsfi\"]","Puppeteer");//Type 'Puppeteer' at the search box
+        await page.type("input[class=\"gLFyf gsfi\"]","Americano");//Type 'Puppeteer' at the search box
         //Test Purpose: Need to find type of it.
         // @ts-ignore
         await page.type("input[class=\"gLFyf gsfi\"]",String.fromCharCode(13));//Input "Enter Key"
@@ -47,7 +47,10 @@ export class Scrapper{
             console.log(error.stackTrace);
         });
 
-        await page.screenshot({path: '../../screenshot.png'});
+        let fileName:string = new Date().getTime().toString() + '.png';
+        console.log(fileName)
+
+        await page.screenshot({path: './screenshots/' + fileName});
 
         //console.log(texts);
         if(texts !== undefined){
