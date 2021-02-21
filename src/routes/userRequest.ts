@@ -13,7 +13,7 @@ import { ScrapReq } from "../model/reqModel";
 import { Scrapper } from "../controller/scrap";
 
 //Code Starts Here
-const router = express.Router();
+const router: express.Router = express.Router();
 const scrapper = new Scrapper();
 
 router.post("/",(req:express.Request, res: express.Response) => {
