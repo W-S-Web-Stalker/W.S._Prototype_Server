@@ -1,0 +1,31 @@
+{
+  "name": "W.S._Prototype_Server",
+  "version": "1.0.0",
+  "description": "Testing Server-side Service for Web Stalker",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node ./src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/W-S-Web-Stalker/W.S._Prototype_Server.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/W-S-Web-Stalker/W.S._Prototype_Server/issues"
+  },
+  "homepage": "https://github.com/W-S-Web-Stalker/W.S._Prototype_Server#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7",
+    "puppeteer": "^7.1.0",
+    "ts-node": "^9.1.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.11",
+    "@types/puppeteer": "^5.4.3"
+  }
+}
