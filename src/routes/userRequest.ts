@@ -16,16 +16,17 @@ import { Scrapper } from "../controller/scrap";
 const router: express.Router = express.Router();
 const scrapper = new Scrapper();
 
-router.post("/",(req:express.Request, res: express.Response) => {
+router.post("/",(req: express.Request, res: express.Response) => {
     //Incoming Request Body
     /*
     {
         "url":"www.example.com",
-        "xpath":"example xpath"
+        "xpath":"example xpath",
+        "searchFor":"searching target"
     }
     */
     //console.log(req.body.url,req.body.xPath);
-    const scrap:ScrapReq = new ScrapReq(req.body.url,req.body.xPath);
+    const scrap:ScrapReq = new ScrapReq(req.body.url,req.body.xPath, req.body.searchFor);
     scrapper.receiveTarget(scrap);
     res.send("Done!");
 })

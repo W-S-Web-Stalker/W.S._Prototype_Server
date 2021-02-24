@@ -20,10 +20,12 @@ Content-Type: application/json
 export class ScrapReq {
     private readonly url:string;
     private readonly xPath:string;
+    private readonly searchFor:string;
 
-    constructor(url:string, xPath:string) {
+    constructor(url:string, xPath:string, searchFor:string) {
         this.url = url;
         this.xPath = xPath;
+        this.searchFor = searchFor;
     }
 
     public getUrl(){
@@ -32,6 +34,10 @@ export class ScrapReq {
 
     public getXPath(){
         return this.xPath;
+    }
+
+    public getSearchFor(){
+        return this.searchFor;
     }
 
 }
