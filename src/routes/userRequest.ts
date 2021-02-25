@@ -31,4 +31,9 @@ router.post("/",(req: express.Request, res: express.Response) => {
     res.send("Done!");
 })
 
+router.get("/redirect",(req:express.Request, res:express.Response) => {
+    res.send("Redirecting...");
+    //TODO: Facebook OAuth
+})
+
 export default router;
