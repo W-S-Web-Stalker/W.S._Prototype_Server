@@ -73,7 +73,7 @@ typings/
 .yarn-integrity
 
 # dotenv environment variables file
-.env
+src/config/.env
 .env.test
 .env*.local
 
@@ -214,7 +214,3 @@ fabric.properties
 # CodeStream plugin
 # https://plugins.jetbrains.com/plugin/12206-codestream
 .idea/codestream.xml
-
-#Screenshots
-screenshots/
-credentials/

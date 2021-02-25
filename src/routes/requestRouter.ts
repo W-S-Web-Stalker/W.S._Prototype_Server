@@ -1,5 +1,5 @@
 //====================================
-//userRequest.ts
+//requestRouter.ts
 /*
 Declaration for router specialized for user request.
 Dedicated jobs:
@@ -29,11 +29,6 @@ router.post("/",(req: express.Request, res: express.Response) => {
     const scrap:ScrapReq = new ScrapReq(req.body.url,req.body.xPath, req.body.searchFor);
     scrapper.receiveTarget(scrap);
     res.send("Done!");
-})
-
-router.get("/redirect",(req:express.Request, res:express.Response) => {
-    res.send("Redirecting...");
-    //TODO: Facebook OAuth
 })
 
 export default router;
