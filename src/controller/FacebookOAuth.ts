@@ -10,8 +10,8 @@ import EnvVerifier from '../model/EnvVerifier'
 import dotenv from 'dotenv';
 
 //Path Declaration
-const path = 'src/config/.env'
-dotenv.config({path});
+const path = 'src/config/.env';
+dotenv.config({path:path});
 
 //Class - Generate Auth Uri.
 class AuthUriGenerator{
@@ -22,7 +22,6 @@ class AuthUriGenerator{
         &redirect_uri={redirect-uri}
         &state={state-param}
     */
-
     getAuthUri(host:string, endpoint:string, clientId:string, redirect:string, state:string):string {
         return this.addParams(this.setUri(host,endpoint),clientId,redirect,state);
     }
