@@ -10,6 +10,7 @@ Managing GET and POST Http Requests.
 import express from 'express';
 import reqRouter from "./requestRouter";
 import authRouter from "./authRouter";
+import {FacebookOAuth} from "../controller/FacebookOAuth";
 
 //Code Starts Here
 const router:express.Router = express.Router();
@@ -19,6 +20,11 @@ const router:express.Router = express.Router();
 router.get("/",(req:express.Request,res:express.Response) => {
     res.send("This is the main page");
 });
+
+router.get("/testAuth", (req:express.Request, res:express.Response) => {
+    const OAuth : FacebookOAuth = new FacebookOAuth();
+    res.redirect(OAuth.generateAuthUri());
+})
 
 //User Request uses request Router; definitions are declared at requestRouter.ts
 router.use("/req",reqRouter);

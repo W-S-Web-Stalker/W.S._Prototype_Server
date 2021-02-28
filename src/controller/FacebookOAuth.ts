@@ -53,9 +53,9 @@ export class FacebookOAuth{
         return Auth.getAuthUri(
             env.verify(process.env.HOST),
             env.verify(process.env.ENDPOINT),
-            env.verify(process.env.CLIENT_ID),
-            env.verify(process.env.REDIRECT),
-            env.verify(process.env.STATE)
+            "client_id=" + env.verify(process.env.CLIENT_ID),
+            "redirect_uri=" + env.verify(process.env.REDIRECT),
+            "state=" + env.verify(process.env.STATE)
         );
     }
 }
