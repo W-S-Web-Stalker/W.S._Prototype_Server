@@ -14,6 +14,7 @@ import * as fs from "fs";
 import EnvVerifier from "./model/EnvVerifier";
 import * as https from "https";
 import dotenv from 'dotenv';
+import cookieParser from "cookie-parser";
 
 //Path Declaration
 const path = 'src/config/.env';
@@ -35,6 +36,7 @@ const app:express.Application = new App().application;
 
 //Set body-parser for JSON - req.body can read JSON body.
 app.use(express.json());
+app.use(cookieParser());
 
 //Set Main Router
 app.use("/",router);

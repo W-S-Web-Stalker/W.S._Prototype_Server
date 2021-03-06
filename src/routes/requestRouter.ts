@@ -31,4 +31,8 @@ router.post("/",(req: express.Request, res: express.Response) => {
     res.send("Done!");
 })
 
+router.post("/send",(req:express.Request, res:express.Response) => {
+    //TODO: Send Message using messenger.
+})
+
 export default router;
